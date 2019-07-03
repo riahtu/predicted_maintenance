@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.rig-and-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.stars {
+  background: #000
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: 1;
+}
+
+.twinkling {
+  background: rgba(0, 0, 0, 0.1)
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
+    top center;
+  z-index: 1;
+
+  -moz-animation: move-twink-back 400s linear infinite;
+  -ms-animation: move-twink-back 400s linear infinite;
+  -o-animation: move-twink-back 400s linear infinite;
+  -webkit-animation: move-twink-back 400s linear infinite;
+  animation: move-twink-back 400s linear infinite;
+}
+
+.landing-body {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filtered {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: 1;
+}
+
+canvas {
+  z-index: 2;
+  position: absolute;
+}
+
+.landing-text {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.1em;
+  margin-bottom: 400px !important;
+  text-align: center;
+  text-shadow: 5px 5px 8px #ffffff61;
+  font-size: 80px;
+  font-weight: 900;
+  padding: 120px;
+  /* max-width: 600px; */
+}
+
+.slide1,
+.slide2,
+.slide3 {
+  position: absolute;
+  max-width: 600px;
+}
+.slide1 {
+  animation: fade 17s infinite;
+  -webkit-animation: fade 17s infinite;
+}
+.slide2 {
+  animation: fade2 17s infinite;
+  -webkit-animation: fade2 17s infinite;
+}
+.slide3 {
+  animation: fade3 17s infinite;
+  -webkit-animation: fade3 17s infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.8;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 0.8;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .landing-text {
+    font-size: 50px;
+    margin-left: 100px;
+    margin-bottom: 300px;
+  }
+  .slide1,
+  .slide2,
+  .slide3 {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  canvas {
+    display: none;
+  }
+  .landing-body {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+  .landing-text {
+    font-size: 70px;
+    text-align: center;
+  }
+}

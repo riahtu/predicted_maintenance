@@ -1,0 +1,47 @@
+@keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  background-color: black !important;
+}
+
+body {
+  animation: 3s ease-in-out 0s 1 fade-in-body;
+  background-image: linear-gradient(
+    to bottom left,
+    #0c0f0f,
+    #0c0f0f,
+    #121a1a,
+    #2e3834
+  ) !important;
+}

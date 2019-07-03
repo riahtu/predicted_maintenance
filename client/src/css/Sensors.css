@@ -1,0 +1,172 @@
+@keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sensorsPageLayout {
+  background-color: black;
+}
+
+.frameBody {
+  width: 100%;
+  height: 100%;
+}
+
+.sensorModelFrame {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+.sensorButtonArea {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 75px;
+  margin-left: 25px;
+}
+
+.singleButton {
+  margin: 20px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.sensorCard {
+  flex-wrap: wrap;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  margin-left: 25px;
+  margin-top: 425px;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 4s ease-in-out, left 2.5s;
+  -moz-transition: opacity 4s ease-in-out, left 2.5s;
+  -webkit-transition: opacity 4s ease-in-out, left 2.5s;
+}
+
+.sensorValueType {
+  font-family: "Montserrat", sans-serif;
+  margin: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+
+.sensVals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px;
+  width: 175px;
+  height: 110px;
+}
+
+.topCard {
+  display: flex;
+}
+
+.bottomCard {
+  display: flex;
+}
+
+.sensRul {
+  display: flex;
+}
+
+.rulStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px;
+  width: 390px;
+  height: 130px;
+}
+
+@keyframes fade-out-loadingRef {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+@-webkit-keyframes fade-out-loadingRef {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade-out-loadingRef {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fade-out-loadingRef {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loadRefModel {
+  font-family: "Montserrat", sans-serif;
+  animation: 12s ease-in-out 0s 1 fade-out-loadingRef;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  width: 100%;
+  /* height: 10vh; */
+  margin-top: 450px;
+  text-align: center;
+}
+
+.loadRefModel {
+  opacity: 0;
+}

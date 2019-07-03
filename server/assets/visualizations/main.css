@@ -1,0 +1,411 @@
+#__oj_zorder_container {
+  height: 0px !important;
+}
+
+body {
+  margin: 0;
+  background-color: black !important;
+}
+
+/* if we dont want the loading */
+/* .bi_loadingContainer {
+  display: none;
+} */
+
+.bi_loadingMsgContainer {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.bi_loadingMsgContainer {
+  height: 80px;
+  color: rgba(84, 88, 94);
+}
+
+/* this is for the border around the individual
+visualization for our freeform map viz */
+.vizshelloutercontainer_hoverframe {
+  border: none !important;
+}
+
+/* THis removes the border around the tile */
+#tileContainer {
+  border: none !important;
+}
+
+@keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pageLayout {
+  animation: 3s ease-in-out 0s 1 fade-in-body;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to top right,
+    #0c0f0f,
+    #0c0f0f,
+    #121a1a,
+    #2e3834
+  );
+  overflow-y: scroll;
+}
+
+.topVizsPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.tilesSection {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 30px;
+}
+
+@keyframes fade-in-shadow {
+  from {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@-webkit-keyframes fade-in-shadow {
+  from {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@-moz-keyframes fade-in-shadow {
+  from {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@-ms-keyframes fade-in-shadow {
+  from {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+
+.vizDvStyleTimeline {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 490px;
+  width: 1200px;
+  box-sizing: border-box;
+  /* margin: 10px; */
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.vizDvStyleTimeline:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+.timeLineSection {
+  margin-left: 30px;
+}
+
+.pieGraph {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 500px;
+  width: 530px;
+  box-sizing: border-box;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.pieGraph:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+#refineryTitleName {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-top: 125px;
+  background: -webkit-linear-gradient(#fff, #384845);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vizDvStyleTile {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 120px;
+  width: 210px;
+  box-sizing: border-box;
+  margin: 10px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.vizDvStyleTile:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+.vizDvStyleCosts {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 500px;
+  width: 950px;
+  box-sizing: border-box;
+  margin: 10px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.vizDvStyleCosts:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+.vizDvStyle {
+  display: inline-block;
+  height: 400px;
+  width: 650px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+@keyframes fade-in-titles {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-titles {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-titles {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-titles {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.vizTitle {
+  animation: 10s ease-in-out 0s 1 fade-in-body;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  font-size: 22px;
+  padding: 5px;
+  margin: 2px 2px 2px 10px;
+  background: -webkit-linear-gradient(#fff, #96bbb2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.middleVizSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.bottomVizSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomVizDv {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 700px;
+  width: 1490px;
+  box-sizing: border-box;
+  margin: 10px;
+  margin-bottom: 100px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.bottomVizDv:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+.bottomDoubleVizSection {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.bottomDoubleVizDv {
+  animation: 8s ease-in 0s 1 fade-in-shadow;
+  display: inline-block;
+  height: 600px;
+  width: 750px;
+  box-sizing: border-box;
+  margin: 10px;
+  margin-bottom: 100px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.bottomDoubleVizDv:hover {
+  box-shadow: -5px 5px 10px rgba(255, 255, 255, 0.06);
+}
+
+.bitech-stretchbox {
+  /* border-radius: 14px !important; */
+}
+
+.bitech-canvas {
+  /* border-radius: 10px !important; */
+}
+
+.bi_rootlayoutwrapper {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  /* color: white !important; */
+  /* border-radius: 10px !important; */
+}
+
+/* this is for the DV text */
+text {
+  fill: white !important;
+}
+
+/* remove blue icon for map */
+.bi_filterviewbadge {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  .topVizsPage {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .tilesSection {
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  .vizDvStyleTimeline {
+    height: 310px;
+    width: 980px;
+  }
+  .middleVizSection {
+    justify-content: space-around;
+  }
+  .vizDvStyleCosts {
+    height: 400px;
+    width: 490px;
+  }
+  .pieGraph {
+    height: 400px;
+    width: 490px;
+  }
+  .backgroundVizBottomSection {
+    margin-right: -10px;
+  }
+  .bottomVizSection {
+    display: none;
+  }
+  /* .bottomVizDv {
+    width: 980px;
+  } */
+  .bottomDoubleVizDv {
+    height: 400px;
+    width: 490px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .timeLineSection {
+    display: none;
+  }
+  .middleVizSection {
+    justify-content: center;
+  }
+  .bottomDoubleVizSection {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tilesSection {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .vizDvStyleCosts {
+    height: 300px;
+    width: 310px;
+  }
+}
+
+iframe {
+  border: none !important;
+}
+
+.breadcrumb {
+  display: none !important;
+}

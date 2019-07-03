@@ -1,0 +1,186 @@
+@keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.aboutBody {
+  animation: 2s ease-in-out 0s 1 fade-in-WholeBody;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom left,
+    #0c0f0f,
+    #0c0f0f,
+    #121a1a,
+    #2e3834
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fade-in-statementSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-statementSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-statementSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-statementSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.statementSection {
+  animation: 5s ease-in-out 0s 1 fade-in-statementSection;
+  margin-top: 75px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.stateText {
+  font-size: 1.5em;
+}
+
+@keyframes fade-in-marketingSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-marketingSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-marketingSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-marketingSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.marketingSection {
+  animation: 5s ease-in-out 0s 1 fade-in-marketingSection;
+  height: 175px;
+  margin-top: 75px !important;
+  margin-bottom: 75px !important;
+  background-color: rgba(27, 28, 29, 0.5) !important;
+}
+
+.teamHeader {
+  color: #ffffffe1 !important;
+  text-align: center;
+}
+
+.marketText {
+  margin-bottom: 10px !important;
+}
+
+.ui.cards {
+  justify-content: center !important;
+}
+
+@keyframes fade-in-ourTeamSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-ourTeamSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-ourTeamSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-ourTeamSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ourTeamSection {
+  animation: 5s ease-in-out 0s 1 fade-in-ourTeamSection;
+}
+
+.ourTeam {
+  margin-bottom: 50px !important;
+}

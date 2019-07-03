@@ -1,0 +1,43 @@
+.navRefLogin {
+  position: absolute;
+
+  height: 85px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.refloginBtn {
+  margin-right: 50px !important;
+}
+
+.reflogoutBtn {
+  margin-right: 20px !important;
+}
+
+.refineryLinkBack {
+  color: white;
+  font-size: 20px;
+}
+
+.refNavLogout {
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    #0c0f0fa5,
+    #0c0f0fa5,
+    #121a1aa5,
+    #2e3834a5
+  );
+  height: 85px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 10px;
+}

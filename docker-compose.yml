@@ -1,0 +1,23 @@
+version: "3"
+  
+services:
+  backend:
+    build: ./server
+    ports:
+      - "8080:5000"
+    environment:
+      - MONGO_URI
+      - ORACLE_CLIENT_SELF_REG
+      - ORACLE_CLIENT_SECRET
+      - ORACLE_CLIENT_ID
+      - CLIENT_SECRET
+      - SIGN_IN_CLIENT_ID
+      - IDCS_TENANCY_ID
+      - APP_CALLBACK_URL
+      - NODE_ORACLEDB_USER
+      - NODE_ORACLEDB_PASSWORD
+      - NODE_ORACLEDB_CONNECTIONSTRING
+  frontend:
+    build: ./client
+    ports:
+      - 80:80

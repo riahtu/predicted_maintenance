@@ -1,0 +1,117 @@
+@keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-body {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.refBody {
+  animation: 3s ease-in-out 0s 1 fade-in-body;
+  background-image: linear-gradient(
+    to top left,
+    #0c0f0f,
+    #0c0f0f,
+    #121a1a,
+    #2e3834
+  );
+  overflow-y: scroll;
+}
+
+@keyframes fade-out-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+@-webkit-keyframes fade-out-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade-out-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fade-out-loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loadingCards {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+  animation: 12s ease-in-out 0s 1 fade-out-loading;
+  align-items: center;
+  margin-top: 300px;
+  text-shadow: 2px 2px 10px #ffffff61;
+  font-size: 50px;
+  font-weight: 300;
+  color: white;
+}
+
+.loadingCards {
+  opacity: 0;
+}
+
+.ref-landing-body {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.refineriesCanvas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 85vw;
+  height: 100vh;
+  box-sizing: border-box;
+}

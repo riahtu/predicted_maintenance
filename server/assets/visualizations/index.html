@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Visualizations</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="pageLayout">
+      <div id="refineryTitleName"></div>
+
+      <div class="topVizsPage">
+        <div class="tilesSection">
+          <div class="singleTile">
+            <div class="vizTitle">All Costs ($)</div>
+            <div class="vizDvStyleTile">
+              <oracle-dv
+                project-path="/users/manta/Refinery"
+                active-page="canvas"
+                active-tab-id="11"
+                project-options="{{options}}"
+                filters="{{filters}}"
+              >
+              </oracle-dv>
+            </div>
+          </div>
+
+          <div class="singleTile">
+            <div class="vizTitle">Net Loss (Barrels)</div>
+            <div class="vizDvStyleTile">
+              <oracle-dv
+                project-path="/users/manta/Refinery"
+                active-page="canvas"
+                active-tab-id="10"
+                project-options="{{options}}"
+                filters="{{filters}}"
+              >
+              </oracle-dv>
+            </div>
+          </div>
+
+          <div class="singleTile">
+            <div class="vizTitle">Spills Count</div>
+            <div class="vizDvStyleTile">
+              <oracle-dv
+                project-path="/users/manta/Refinery"
+                active-page="canvas"
+                active-tab-id="9"
+                project-options="{{options}}"
+                filters="{{filters}}"
+              >
+              </oracle-dv>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeLineSection">
+          <div class="timeLine">
+            <div class="vizTitle">Liquid Recovery by Quarter</div>
+            <div class="vizDvStyleTimeline">
+              <oracle-dv
+                project-path="/users/manta/Refinery"
+                active-page="canvas"
+                active-tab-id="6"
+                project-options="{{options}}"
+                filters="{{filters}}"
+              >
+              </oracle-dv>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="middleVizSection">
+        <div class="costType">
+          <div class="vizTitle">Various Costs by Category</div>
+          <div class="vizDvStyleCosts">
+            <oracle-dv
+              project-path="/users/manta/Refinery"
+              active-page="canvas"
+              active-tab-id="2"
+              project-options="{{options}}"
+              filters="{{filters}}"
+            >
+            </oracle-dv>
+          </div>
+        </div>
+
+        <div class="topPie">
+          <div class="pieSection">
+            <div class="vizTitle">Costs by Liquid Type</div>
+            <div class="pieGraph ">
+              <oracle-dv
+                project-path="/users/manta/Refinery"
+                active-page="canvas"
+                active-tab-id="12"
+                project-options="{{options}}"
+                filters="{{filters}}"
+              >
+              </oracle-dv>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomVizSection">
+        <div class="backgroundVizMap">
+          <div class="vizTitle">Net Loss by Liquid Fuel Type</div>
+
+          <div class="bottomVizDv">
+            <oracle-dv
+              project-path="/users/manta/Refinery"
+              active-page="canvas"
+              active-tab-id="5"
+              project-options="{{options}}"
+              filters="{{filters}}"
+            >
+            </oracle-dv>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomDoubleVizSection">
+        <div class="backgroundVizBottomSection">
+          <div class="vizTitle">Net Loss (Barrels) by District</div>
+          <div class="bottomDoubleVizDv">
+            <oracle-dv
+              project-path="/users/manta/Refinery"
+              active-page="canvas"
+              active-tab-id="7"
+              project-options="{{options}}"
+              filters="{{filters}}"
+            >
+            </oracle-dv>
+          </div>
+        </div>
+
+        <div class="backgroundVizBottomSection">
+          <div class="vizTitle">Net Loss by Year and Liquid Type</div>
+
+          <div class="bottomDoubleVizDv">
+            <oracle-dv
+              project-path="/users/manta/Refinery"
+              active-page="canvas"
+              active-tab-id="4"
+              project-options="{{options}}"
+              filters="{{filters}}"
+            >
+            </oracle-dv>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://innovateaccelv2-orasenatdpltoci02.analytics.ocp.oraclecloud.com/dv/ui/api/v1/plugins/embedding/standalone/embedding.js"
+      type="application/javascript"
+    ></script>
+
+    <script>
+      var OpName = "";
+      function cleanUrl() {
+        const url = window.location.href;
+        const cleanUrl = url.replace(/.*[?]/, "");
+        OpName = cleanUrl.replace(/%20/g, " ");
+        console.log("the newer opName: ", OpName);
+      }
+
+      cleanUrl();
+      console.log("The global opname is: ", OpName);
+      // example url to use: http://127.0.0.1:4000/?Colonial%20Pipeline%20Co
+
+      ////////////////////////////////////////////////
+
+      var target = document.getElementById("refineryTitleName");
+      console.log("the target is: ", target);
+      var textnode = document.createTextNode(OpName);
+      console.log("the textnode is is: ", textnode);
+
+      target.appendChild(textnode);
+
+      ////////////////////////////////////////////////
+
+      requirejs(
+        [
+          "knockout",
+          "ojs/ojcore",
+          "ojs/ojknockout",
+          "ojs/ojcomposite",
+          "jet-composites/oracle-dv/loader"
+        ],
+        function(ko) {
+          function MayProject() {
+            var self = this;
+            self.filters = ko.observableArray([
+              {
+                sColFormula:
+                  "XSA('manta'.'iot_sensor_data').\"Columns\".\"Operator Name\"",
+                sColName: "OperatorName",
+                sOperator: "in",
+                isNumericCol: false,
+                bIsDoubleColumn: false,
+                aCodeValues: [],
+                aDisplayValues: [OpName]
+              }
+            ]);
+            self.options = ko.observable({
+              bDisableMobileLayout: true,
+              bShowFilterBar: false
+            });
+          }
+          ko.applyBindings(MayProject);
+        }
+      );
+    </script>
+  </body>
+</html>

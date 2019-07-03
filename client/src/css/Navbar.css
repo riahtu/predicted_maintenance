@@ -1,0 +1,36 @@
+.nav {
+  position: absolute;
+  height: 85px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navLink,
+.loginBtn {
+  margin-right: 50px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.navLogout {
+  height: 85px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logoutBtn {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.navLink:hover {
+  color: #c5ffe3;
+}

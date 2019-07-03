@@ -1,0 +1,102 @@
+@keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in-WholeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: 2s ease-in-out 0s 1 fade-in-WholeBody;
+  background-color: black;
+}
+
+.loginBody {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to top left,
+    #0c0f0f,
+    #0c0f0f,
+    #121a1a,
+    #2e3834
+  );
+}
+
+div.ui.center.aligned.middle.grid {
+  margin: 0;
+  width: 100%;
+}
+
+div.column.loginColumn {
+  max-width: 450px;
+}
+
+.ui.segment {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.ui.header {
+  margin: 0 1rem;
+}
+
+.ui.message {
+  color: white;
+  border-radius: 10px;
+}
+
+.ui.message > :last-child {
+  margin: 1em;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+}
+main {
+  flex: 1 0 auto;
+}
+
+.input-field input[type="date"]:focus + label,
+.input-field input[type="text"]:focus + label,
+.input-field input[type="email"]:focus + label,
+.input-field input[type="password"]:focus + label {
+  color: #e91e63;
+}
+
+.input-field input[type="date"]:focus,
+.input-field input[type="text"]:focus,
+.input-field input[type="email"]:focus,
+.input-field input[type="password"]:focus {
+  border-bottom: 2px solid #e91e63;
+  box-shadow: none;
+}
